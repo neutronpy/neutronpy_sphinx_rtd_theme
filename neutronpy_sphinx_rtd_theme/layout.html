@@ -24,6 +24,7 @@
   {% endif %}
 
   {# CSS #}
+    <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
 
   {# OPENSEARCH #}
   {% if not embedded %}
@@ -36,6 +37,7 @@
   {# RTD hosts this file, so just load on non RTD builds #}
   {% if not READTHEDOCS %}
     <link rel="stylesheet" href="{{ pathto('_static/' + style, 1) }}" type="text/css" />
+    <link rel="stylesheet" href="{{ pathto('_static/pygments.css', 1) }}" type="text/css" />
   {% endif %}
 
   {% for cssfile in css_files %}

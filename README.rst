@@ -37,7 +37,7 @@ Download the package or add it to your ``requirements.txt`` file:
 
 .. code:: bash
 
-    $ pip install sphinx_rtd_theme
+    $ pip install neutronpy_sphinx_rtd_theme
 
 In your ``conf.py`` file:
 
@@ -45,20 +45,20 @@ In your ``conf.py`` file:
 
     import sphinx_rtd_theme
 
-    html_theme = "sphinx_rtd_theme"
+    html_theme = "neutronpy_sphinx_rtd_theme"
 
-    html_theme_path = [sphinx_rtd_theme.get_html_theme_path()]
+    html_theme_path = [neutronpy_sphinx_rtd_theme.get_html_theme_path()]
 
 Via git or download
 -------------------
 
-Symlink or subtree the ``sphinx_rtd_theme/sphinx_rtd_theme`` repository into your documentation at
-``docs/_themes/sphinx_rtd_theme`` then add the following two settings to your Sphinx
+Symlink or subtree the ``neutronpy_sphinx_rtd_theme/neutronpy_sphinx_rtd_theme`` repository into your documentation at
+``docs/_themes/neutronpy_sphinx_rtd_theme`` then add the following two settings to your Sphinx
 conf.py file:
 
 .. code:: python
 
-    html_theme = "sphinx_rtd_theme"
+    html_theme = "neutronpy_sphinx_rtd_theme"
     html_theme_path = ["_themes", ]
 
 Changelog
@@ -79,7 +79,7 @@ v0.1.9
 * Fixed modernizr URL
 * Small display style changes on code blocks, figure captions, and nav elements
 
-.. _#215: https://github.com/snide/sphinx_rtd_theme/pull/215
+.. _#215: https://github.com/neutronpy/neutronpy_sphinx_rtd_theme/pull/215
 
 v0.1.8
 ------
@@ -196,9 +196,9 @@ you can add something like this to your config. Thanks to Daniel Oaks for this.
     on_rtd = os.environ.get('READTHEDOCS', None) == 'True'
 
     if not on_rtd:  # only import and set the theme if we're building docs locally
-        import sphinx_rtd_theme
-        html_theme = 'sphinx_rtd_theme'
-        html_theme_path = [sphinx_rtd_theme.get_html_theme_path()]
+        import neutronpy_sphinx_rtd_theme
+        html_theme = 'neutronpy_sphinx_rtd_theme'
+        html_theme_path = [neutronpy_sphinx_rtd_theme.get_html_theme_path()]
 
     # otherwise, readthedocs.org uses their theme by default, so no need to specify it
 

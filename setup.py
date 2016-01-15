@@ -1,30 +1,31 @@
 # -*- coding: utf-8 -*-
-"""`sphinx_rtd_theme` lives on `Github`_.
+"""`neutronpy_sphinx_rtd_theme` lives on `Github`_.
 
-.. _github: https://www.github.com/snide/sphinx_rtd_theme
+.. _github: https://www.github.com/neutronpy/neutronpy_sphinx_rtd_theme
 
 """
 from setuptools import setup
-from sphinx_rtd_theme import __version__
+from neutronpy_sphinx_rtd_theme import __version__
 
 
 setup(
-    name='sphinx_rtd_theme',
+    name='neutronpy_sphinx_rtd_theme',
     version=__version__,
-    url='https://github.com/snide/sphinx_rtd_theme/',
+    url='https://github.com/neutronpy/neutronpy_sphinx_rtd_theme/',
     license='MIT',
-    author='Dave Snider',
-    author_email='dave.snider@gmail.com',
+    author='David M Fobes',
+    author_email='pseudocubic@gmail.com',
     description='ReadTheDocs.org theme for Sphinx, 2013 version.',
     long_description=open('README.rst').read(),
     zip_safe=False,
-    packages=['sphinx_rtd_theme'],
-    package_data={'sphinx_rtd_theme': [
+    packages=['neutronpy_sphinx_rtd_theme'],
+    package_data={'neutronpy_sphinx_rtd_theme': [
         'theme.conf',
         '*.html',
         'static/css/*.css',
         'static/js/*.js',
-        'static/font/*.*'
+        'static/font/*.*',
+        'support.py'
     ]},
     include_package_data=True,
     classifiers=[

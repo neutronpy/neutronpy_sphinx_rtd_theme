@@ -1,6 +1,6 @@
-"""Sphinx ReadTheDocs theme.
+"""NeutronPy's Sphinx ReadTheDocs theme.
 
-From https://github.com/ryan-roemer/sphinx-bootstrap-theme.
+From https://github.com/neutronpy/neutronpy_sphinx_rtd_theme
 
 """
 import os
