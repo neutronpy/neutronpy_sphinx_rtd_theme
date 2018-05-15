@@ -1,34 +1,8 @@
-.. _readthedocs.org: http://www.readthedocs.org
-.. _bower: http://www.bower.io
-.. _sphinx: http://www.sphinx-doc.org
-.. _compass: http://www.compass-style.org
-.. _sass: http://www.sass-lang.com
-.. _wyrm: http://www.github.com/snide/wyrm/
-.. _grunt: http://www.gruntjs.com
-.. _node: http://www.nodejs.com
-.. _demo: http://docs.readthedocs.org
-.. _hidden: http://sphinx-doc.org/markup/toctree.html
 
 **************************
 Read the Docs Sphinx Theme
 **************************
 
-.. contents:: 
-
-View a working demo_ over on readthedocs.org_.
-
-This is a mobile-friendly sphinx_ theme I made for readthedocs.org_. It's
-currently in development there and includes some rtd variable checks that can be ignored
-if you're just trying to use it on your project outside of that site.
-
-**This repo also exists as a submodule within the readthedocs itself**, so please make your edits to
-the SASS files here, rather than the .css files on RTD.
-
-.. image:: screen_mobile.png
-    :width: 100%
-
-Installation
-============
 
 Via package
 -----------
@@ -161,47 +135,53 @@ This default task will do the following **very cool things that make it worth th
 3. It'll watch for changes to the sass files and build css from the changes.
 4. It'll rebuild the sphinx docs anytime it notices a change to .rst, .html, .js
    or .css files.
+=======
+.. image:: https://img.shields.io/pypi/v/sphinx_rtd_theme.svg
+   :target: https://pypi.python.org/pypi/sphinx_rtd_theme
+   :alt: Pypi Version 
+.. image:: https://travis-ci.org/rtfd/sphinx_rtd_theme.svg?branch=master
+   :target: https://travis-ci.org/rtfd/sphinx_rtd_theme
+   :alt: Build Status
+.. image:: https://img.shields.io/pypi/l/sphinx_rtd_theme.svg
+   :target: https://pypi.python.org/pypi/sphinx_rtd_theme/
+   :alt: License
+.. image:: https://readthedocs.org/projects/sphinx-rtd-theme/badge/?version=latest
+  :target: http://sphinx-rtd-theme.readthedocs.io/en/latest/?badge=latest
+  :alt: Documentation Status
+
+The ``sphinx_rtd_theme`` is a sphinx_ theme designed to look modern and be mobile-friendly.
+This theme is primary focused to be used on readthedocs.org_ but can work with your
+own sphinx projects. To read more and see a working demo_ head over to readthedocs.org_.
+
+.. _sphinx: http://www.sphinx-doc.org
+.. _readthedocs.org: http://www.readthedocs.org
+.. _demo: https://sphinx-rtd-theme.readthedocs.io/en/latest/
 
 
-Before you create an issue
---------------------------
+Installing
+==========
 
-I don't have a lot of time to maintain this project due to other responsibilities.
-I know there are a lot of Python engineers out there that can't code sass / css and
-are unable to submit pull requests. That said, submitting random style bugs without
-at least providing sample documentation that replicates your problem is a good
-way for me to ignore your request. RST unfortunately can spit out a lot of things
-in a lot of ways. I don't have time to research your problem for you, but I do
-have time to fix the actual styling issue if you can replicate the problem for me.
+The theme is distributed on PyPI_ and can be installed with pip::
+
+   pip install sphinx_rtd_theme
+
+For more information read the full installing docs
+`here <https://sphinx-rtd-theme.readthedocs.io/en/latest/installing.html>`__.
+
+.. _PyPI: https://pypi.python.org/pypi/sphinx_rtd_theme
 
 
-Before you send a Pull Request
-------------------------------
+Configuration
+=============
 
-When you're done with your edits, you can run ``grunt build`` to clean out the old
-files and rebuild a new distribution, compressing the css and cleaning out
-extraneous files. Please do this before you send in a PR.
+The ``sphinx_rtd_theme`` is highly customizable on both the page level and on a global level.
+To see all the possible configuration options read the configuring docs
+`here <https://sphinx-rtd-theme.readthedocs.io/en/latest/configuring.html>`__.
 
-Using this theme locally, then building on Read the Docs?
-==========================================================
 
-Currently if you import sphinx_rtd_theme in your local sphinx build, then pass
-that same config to Read the Docs, it will fail, since RTD gets confused. If
-you want to run this theme locally and then also have it build on RTD, then
-you can add something like this to your config. Thanks to Daniel Oaks for this.
+Contributing
+============
 
-.. code:: python
-
-    # on_rtd is whether we are on readthedocs.org, this line of code grabbed from docs.readthedocs.org
-    on_rtd = os.environ.get('READTHEDOCS', None) == 'True'
-
-    if not on_rtd:  # only import and set the theme if we're building docs locally
-        import neutronpy_sphinx_rtd_theme
-        html_theme = 'neutronpy_sphinx_rtd_theme'
-        html_theme_path = [neutronpy_sphinx_rtd_theme.get_html_theme_path()]
-
-    # otherwise, readthedocs.org uses their theme by default, so no need to specify it
-
-TODO
-====
-* Separate some sass variables at the theme level so you can overwrite some basic colors.
+If you would like to help improve the theme or have more control
+over the theme in case of a fork please read our contributing guide
+`here <https://sphinx-rtd-theme.readthedocs.io/en/latest/contributing.html>`__.

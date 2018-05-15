@@ -4,6 +4,7 @@
 .. _github: https://www.github.com/neutronpy/neutronpy_sphinx_rtd_theme
 
 """
+from io import open
 from setuptools import setup
 from neutronpy_sphinx_rtd_theme import __version__
 
@@ -28,14 +29,26 @@ setup(
         'support.py'
     ]},
     include_package_data=True,
+    # See http://www.sphinx-doc.org/en/stable/theming.html#distribute-your-theme-as-a-python-package
+    entry_points = {
+        'sphinx.html_themes': [
+            'neutronpy_sphinx_rtd_theme = neutronpy_sphinx_rtd_theme',
+        ]
+    },
     classifiers=[
-        'Development Status :: 3 - Alpha',
-        'License :: OSI Approved :: BSD License',
+        'Framework :: Sphinx',
+        'Framework :: Sphinx :: Theme',
+        'Development Status :: 5 - Production/Stable',
+        'License :: OSI Approved :: MIT License',
         'Environment :: Console',
         'Environment :: Web Environment',
         'Intended Audience :: Developers',
         'Programming Language :: Python :: 2.7',
         'Programming Language :: Python :: 3',
+        'Programming Language :: Python :: 3.3',
+        'Programming Language :: Python :: 3.4',
+        'Programming Language :: Python :: 3.5',
+        'Programming Language :: Python :: 3.6',
         'Operating System :: OS Independent',
         'Topic :: Documentation',
         'Topic :: Software Development :: Documentation',
